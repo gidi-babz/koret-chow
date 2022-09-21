@@ -11,7 +11,7 @@ export default function Home() {
 			</Head>
 
 			<main>
-				<h1>Hello</h1>
+				<h1 className="text-7xl">Hello</h1>
 			</main>
 		</div>
 	);
