@@ -6,7 +6,7 @@ const Logo = () => {
 		<>
 			<Box
 				sx={{
-					width: 145,
+					width: { xs: '30px', sm: 145 },
 					height: 80,
 					display: 'flex',
 					justifyContent: 'center',
@@ -18,7 +18,10 @@ const Logo = () => {
 				<Typography
 					variant="h7"
 					component="h1"
-					className="font-semibold text-xl"
+					sx={{
+						display: { xs: 'none', sm: 'block' },
+					}}
+					className="font-semibold text-xl "
 				>
 					Koret Chow
 				</Typography>

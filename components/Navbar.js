@@ -10,6 +10,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Logo from './Logo';
 import headerdata from '../assets/headerdata';
+import Sidebar from './drawer';
 
 const Navbar = () => {
 	return (
@@ -26,10 +27,10 @@ const Navbar = () => {
 				>
 					<Logo />
 
-					<ul className="flex flex-1 w-3/4 items-center justify-center gap-5 p-3 mr-6">
+					<ul className="flex flex-1 w-3/4 items-center justify-center gap-5 p-3 mr-6 hidden lg:flex">
 						{headerdata.map((item, i) => (
 							<Link
-								className="cursor-pointer font-medium  px-2 py-1 rounded-sm hover:text-green-600 active:bg-green-600 active:text-white"
+								className="cursor-pointer font-medium px-2 py-1 rounded-sm hover:text-green-600 active:bg-green-600 active:text-white"
 								key={i}
 								activeClass="active"
 								to={item.path}
@@ -43,7 +44,7 @@ const Navbar = () => {
 						))}
 					</ul>
 
-					<div className="flex items-center justify-center gap-5 mr-2">
+					<div className="flex items-center justify-center gap-4 ml-auto sm:ml-80 md:ml-auto lg:gap-5 lg:ml-0 mr-2">
 						<div className="bg-slate-100 rounded-full p-2 hover:drop-shadow cursor-pointer">
 							<ImSearch />
 						</div>
@@ -53,6 +54,9 @@ const Navbar = () => {
 						<div className="bg-slate-100 rounded-full p-2 hover:drop-shadow cursor-pointer">
 							<FaShoppingCart />
 						</div>
+					</div>
+					<div className="flex items-center justify-center ml-2 cursor-pointer">
+						<Sidebar />
 					</div>
 				</Box>
 			</Container>
