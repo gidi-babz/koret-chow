@@ -30,7 +30,7 @@ const Navbar = () => {
 					<ul className="flex flex-1 w-3/4 items-center justify-center gap-5 p-3 mr-6 hidden lg:flex">
 						{headerdata.map((item, i) => (
 							<Link
-								className="cursor-pointer font-medium px-2 py-1 rounded-sm hover:text-green-600 active:bg-green-600 active:text-white"
+								className="cursor-pointer font-medium px-2 py-1 rounded-sm hover:text-green-600 active:bg-green-600 active:text-white active:ease-in "
 								key={i}
 								activeClass="active"
 								to={item.path}

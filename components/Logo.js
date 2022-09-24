@@ -21,7 +21,7 @@ const Logo = () => {
 					sx={{
 						display: { xs: 'none', sm: 'block' },
 					}}
-					className="font-semibold text-xl "
+					className="font-semibold text-xl"
 				>
 					Koret Chow
 				</Typography>
