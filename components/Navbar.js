@@ -6,8 +6,7 @@ import { AiFillHeart } from 'react-icons/ai';
 import { FaShoppingCart } from 'react-icons/fa';
 
 import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
+import { Box, Container, Tooltip } from '@mui/material';
 import Logo from './Logo';
 import headerdata from '../assets/headerdata';
 import Sidebar from './drawer';
@@ -30,7 +29,7 @@ const Navbar = () => {
 					<ul className="flex flex-1 w-3/4 items-center justify-center gap-5 p-3 mr-6 hidden lg:flex">
 						{headerdata.map((item, i) => (
 							<Link
-								className="cursor-pointer font-medium px-2 py-1 rounded-sm hover:text-green-600 active:bg-green-600 active:text-white active:ease-in "
+								className="cursor-pointer font-small px-2 py-1 rounded-sm hover:text-green-600 active:bg-green-600 active:text-white active:ease-in "
 								key={i}
 								activeClass="active"
 								to={item.path}
@@ -45,15 +44,21 @@ const Navbar = () => {
 					</ul>
 
 					<div className="flex items-center justify-center gap-4 ml-auto sm:ml-80 md:ml-auto lg:gap-5 lg:ml-0 mr-2">
-						<div className="bg-slate-100 rounded-full p-2 hover:drop-shadow cursor-pointer">
-							<ImSearch />
-						</div>
-						<div className="bg-slate-100 rounded-full p-2 hover:drop-shadow cursor-pointer">
-							<AiFillHeart />
-						</div>
-						<div className="bg-slate-100 rounded-full p-2 hover:drop-shadow cursor-pointer">
-							<FaShoppingCart />
-						</div>
+						<Tooltip title="Search">
+							<div className="bg-slate-100 rounded-full p-2 hover:drop-shadow cursor-pointer">
+								<ImSearch />
+							</div>
+						</Tooltip>
+						<Tooltip title="Saved">
+							<div className="bg-slate-100 rounded-full p-2 hover:drop-shadow cursor-pointer">
+								<AiFillHeart />
+							</div>
+						</Tooltip>
+						<Tooltip title="Cart">
+							<div className="bg-slate-100 rounded-full p-2 hover:drop-shadow cursor-pointer">
+								<FaShoppingCart />
+							</div>
+						</Tooltip>
 					</div>
 					<div className="flex items-center justify-center ml-2 cursor-pointer">
 						<Sidebar />

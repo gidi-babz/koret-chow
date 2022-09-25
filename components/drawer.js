@@ -36,7 +36,7 @@ const Sidebar = () => {
 				open={isDrawerOpen}
 				onClose={() => setIsDrawerOpen(false)}
 			>
-				<Box p={2} mt={2} width="300px" textAlign="start" role="presentation">
+				<Box p={2} mt={2} width="320px" textAlign="start" role="presentation">
 					<div className="flex justify-between items-center">
 						<div className="flex justify-center items-center gap-1">
 							<GiKnifeFork className="text-lg text-green-600" />
