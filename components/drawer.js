@@ -39,7 +39,7 @@ const Sidebar = () => {
 			>
 				<Box p={2} mt={2} width="320px" textAlign="start" role="presentation">
 					<div className="flex justify-between items-center">
-						<div className="flex justify-center items-center gap-1">
+						<div className="flex justify-center items-center gap-2 lg:gap-1">
 							<GiKnifeFork className="text-lg text-green-600" />
 							<h2 className="font-semibold text-lg">Koret Chow</h2>
 						</div>
@@ -52,7 +52,7 @@ const Sidebar = () => {
 					</div>
 				</Box>
 				<Scrollbars autoHide>
-					<div className="flex flex-col justify-content align-items gap-4 h-full mt-6 mx-3">
+					<div className="flex flex-col justify-content align-items gap-6 lg:gap-4 h-full mt-6 mx-3">
 						{headerdata.map((item, i) => (
 							<NavLink
 								className="cursor-pointer font-medium px-2 py-1 rounded-sm hover:text-green-600 active:bg-green-600 active:text-white active:ease-in border-b-2 border-solid border-slate-inherit"
@@ -69,7 +69,7 @@ const Sidebar = () => {
 						))}
 
 						{/* REVISIT THIS SECTION AND CLEANUP/REFACTOR THIS CODE*/}
-						<div className="mt-auto flex justify-center items-center gap-4 mb-8">
+						<div className="mt-auto flex justify-center items-center gap-6 lg:gap-4 mb-8">
 							<div className="p-2 rounded-full bg-slate-100">
 								<Link
 									target="_blank"
