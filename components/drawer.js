@@ -27,8 +27,9 @@ const Sidebar = () => {
 				color="inherit"
 				aria-label="Drawer"
 				onClick={() => setIsDrawerOpen(true)}
+				className="self-center lg:hidden"
 			>
-				<IoMenuOutline className="lg:hidden" />
+				<IoMenuOutline className="lg:hidden self-center" />
 			</IconButton>
 
 			<Drawer
