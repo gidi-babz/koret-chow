@@ -1,15 +1,23 @@
+import React from 'react';
 import { Link } from 'react-scroll';
 import { ImSearch } from 'react-icons/im';
 import { AiFillHeart } from 'react-icons/ai';
 import { FaShoppingCart } from 'react-icons/fa';
 
 import CssBaseline from '@mui/material/CssBaseline';
-import { Box, Container, Tooltip } from '@mui/material';
+import { Badge, Box, Container, Tooltip } from '@mui/material';
 import Logo from './Logo';
 import headerdata from '../assets/headerdata';
 import Sidebar from './drawer';
 
 const Navbar = () => {
+	const [count, setCount] = React.useState(1);
+	const [invisible, setInvisible] = React.useState(true);
+
+	const handleBadgeVisibility = () => {
+		setInvisible(!invisible);
+	};
+
 	return (
 		<nav className="h-20 shadow-lg">
 			<CssBaseline />
@@ -53,9 +61,11 @@ const Navbar = () => {
 							</div>
 						</Tooltip>
 						<Tooltip title="Cart">
-							<div className="bg-slate-100 rounded-full p-2 hover:drop-shadow cursor-pointer outline-none">
-								<FaShoppingCart />
-							</div>
+							<Badge badgeContent={4} color="success" invisible={invisible}>
+								<div className="bg-slate-100 rounded-full p-2 hover:drop-shadow cursor-pointer outline-none">
+									<FaShoppingCart />
+								</div>
+							</Badge>
 						</Tooltip>
 					</div>
 					<div className="flex items-center justify-center ml-2 cursor-pointer">
