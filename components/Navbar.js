@@ -14,10 +14,6 @@ const Navbar = () => {
 	const [count, setCount] = React.useState(1);
 	const [invisible, setInvisible] = React.useState(true);
 
-	const handleBadgeVisibility = () => {
-		setInvisible(!invisible);
-	};
-
 	return (
 		<nav className="h-20 shadow-lg">
 			<CssBaseline />

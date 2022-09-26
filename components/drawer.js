@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
+import { Link as NavLink } from 'react-scroll';
 import Link from 'next/link';
 
 import { Box, Drawer, IconButton } from '@mui/material';
 import { Scrollbars } from 'react-custom-scrollbars';
 import { IoMenuOutline } from 'react-icons/io5';
 import { MdOutlineCancel } from 'react-icons/md';
-import {
-	AiOutlineTwitter,
-	AiOutlineGithub,
-	AiFillLinkedin,
-} from 'react-icons/ai';
+import { GiKnifeFork } from 'react-icons/gi';
 
 import headerdata from '../assets/headerdata';
-import { Link as NavLink } from 'react-scroll';
-import Logo from './Logo';
-import { GiKnifeFork } from 'react-icons/gi';
+import drawericons from '../assets/drawericons';
 
 const Sidebar = () => {
 	const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -52,7 +47,7 @@ const Sidebar = () => {
 					</div>
 				</Box>
 				<Scrollbars autoHide>
-					<div className="flex flex-col justify-content align-items gap-8 lg:gap-4 h-full mt-6 mx-3">
+					<div className="flex flex-col justify-content align-items gap-2 lg:gap-4 h-full mt-6 mx-3">
 						{headerdata.map((item, i) => (
 							<NavLink
 								className="cursor-pointer font-medium px-2 py-1 rounded-sm hover:text-green-600 active:bg-green-600 active:text-white active:ease-in mb-5 border-b-2 border-solid border-slate-inherit"
@@ -68,35 +63,18 @@ const Sidebar = () => {
 							</NavLink>
 						))}
 
-						{/* REVISIT THIS SECTION AND CLEANUP/REFACTOR THIS CODE*/}
-						<div className="mt-auto flex justify-center items-center gap-8  mb-8">
-							<div className="p-2 mr-2 rounded-full bg-slate-100">
-								<Link
-									target="_blank"
-									rel="noopener noreferrer"
-									href="https://github.com/gidi-babz"
-								>
-									<AiOutlineGithub className="text-xl" />
-								</Link>
-							</div>
-							<div className="p-2 mr-2 rounded-full bg-slate-100">
-								<Link
-									target="_blank"
-									rel="noopener noreferrer"
-									href="https://twitter.com/gidi_babz"
-								>
-									<AiOutlineTwitter className="text-xl" />
-								</Link>
-							</div>
-							<div className="p-2 rounded-full bg-slate-100">
-								<Link
-									target="_blank"
-									rel="noopener noreferrer"
-									href="https://linkedin.com/in/babatunde-olowoyeye"
-								>
-									<AiFillLinkedin className="text-xl" />
-								</Link>
-							</div>
+						<div className="mt-auto flex justify-center items-center gap-3 mb-8">
+							{drawericons.map((item, i) => (
+								<div className="p-2 mr-2 rounded-full bg-slate-100" key={i}>
+									<Link
+										target="_blank"
+										rel="noopener noreferrer"
+										href={item.href}
+									>
+										{item.icon}
+									</Link>
+								</div>
+							))}
 						</div>
 					</div>
 				</Scrollbars>
