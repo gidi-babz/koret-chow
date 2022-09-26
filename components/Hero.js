@@ -46,7 +46,7 @@ const Hero = () => {
 										</button>
 									</div>
 								</div>
-								<div className="lg:justify-self-end flex-1 mt-14 md:mt-16 lg:mr-14 lg:mt-auto">
+								<div className="lg:justify-self-end flex-1 mt-12 md:mt-16 lg:mr-14 lg:mt-auto">
 									<Image
 										src={hero.imageSrc}
 										alt={hero.title}

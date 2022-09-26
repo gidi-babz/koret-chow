@@ -55,7 +55,7 @@ const Sidebar = () => {
 					<div className="flex flex-col justify-content align-items gap-8 lg:gap-4 h-full mt-6 mx-3">
 						{headerdata.map((item, i) => (
 							<NavLink
-								className="cursor-pointer font-medium px-2 py-1 rounded-sm hover:text-green-600 active:bg-green-600 active:text-white active:ease-in border-b-2 border-solid border-slate-inherit"
+								className="cursor-pointer font-medium px-2 py-1 rounded-sm hover:text-green-600 active:bg-green-600 active:text-white active:ease-in mb-10 border-b-2 border-solid border-slate-inherit"
 								key={i}
 								activeClass="active"
 								to={item.path}
@@ -69,8 +69,8 @@ const Sidebar = () => {
 						))}
 
 						{/* REVISIT THIS SECTION AND CLEANUP/REFACTOR THIS CODE*/}
-						<div className="mt-auto flex justify-center items-center gap-8 lg:gap-4 mb-8">
-							<div className="p-2 rounded-full bg-slate-100">
+						<div className="mt-auto flex justify-center items-center gap-8  mb-8">
+							<div className="p-2 mr-2 rounded-full bg-slate-100">
 								<Link
 									target="_blank"
 									rel="noopener noreferrer"
@@ -79,7 +79,7 @@ const Sidebar = () => {
 									<AiOutlineGithub className="text-xl" />
 								</Link>
 							</div>
-							<div className="p-2 rounded-full bg-slate-100">
+							<div className="p-2 mr-2 rounded-full bg-slate-100">
 								<Link
 									target="_blank"
 									rel="noopener noreferrer"

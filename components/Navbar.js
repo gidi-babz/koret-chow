@@ -49,14 +49,14 @@ const Navbar = () => {
 						))}
 					</ul>
 
-					<div className="flex items-center justify-center gap-8 ml-auto sm:ml-80 md:ml-auto lg:gap-5 lg:ml-0 mr-2 self-center">
+					<div className="flex items-center justify-center gap-4 ml-auto sm:ml-80 md:ml-auto lg:gap-5 lg:ml-0 mr-2 self-center">
 						<Tooltip title="Search">
-							<div className="bg-slate-100 rounded-full p-2 hover:drop-shadow cursor-pointer outline-none">
+							<div className="bg-slate-100 mr-2 lg:mr-0 rounded-full p-2 hover:drop-shadow cursor-pointer outline-none">
 								<ImSearch />
 							</div>
 						</Tooltip>
 						<Tooltip title="Saved">
-							<div className="bg-slate-100 rounded-full p-2 hover:drop-shadow cursor-pointer outline-none">
+							<div className="bg-slate-100 mr-2 lg:mr-0 rounded-full p-2 hover:drop-shadow cursor-pointer outline-none">
 								<AiFillHeart />
 							</div>
 						</Tooltip>
