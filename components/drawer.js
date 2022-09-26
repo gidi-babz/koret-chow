@@ -55,7 +55,7 @@ const Sidebar = () => {
 					<div className="flex flex-col justify-content align-items gap-8 lg:gap-4 h-full mt-6 mx-3">
 						{headerdata.map((item, i) => (
 							<NavLink
-								className="cursor-pointer font-medium px-2 py-1 rounded-sm hover:text-green-600 active:bg-green-600 active:text-white active:ease-in mb-10 border-b-2 border-solid border-slate-inherit"
+								className="cursor-pointer font-medium px-2 py-1 rounded-sm hover:text-green-600 active:bg-green-600 active:text-white active:ease-in mb-5 border-b-2 border-solid border-slate-inherit"
 								key={i}
 								activeClass="active"
 								to={item.path}
