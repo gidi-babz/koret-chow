@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme');
+// const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
 	content: [
@@ -9,9 +9,11 @@ module.exports = {
 	theme: {
 		extend: {},
 	},
-	plugins: [],
 	fontFamily: {
-		sans: ['Nunito', ...defaultTheme.fontFamily.sans],
-		serif: ['Merriweather', 'serif'],
+		custom: ['Nunito', 'sans'],
+		// serif: ['Merriweather', 'serif'],
 	},
+	plugins: [],
 };
+
+// ...defaultTheme.fontFamily.sans
