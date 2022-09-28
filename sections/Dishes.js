@@ -21,7 +21,7 @@ const Dishes = () => {
 		<section id="dishes" className="bg-gray-100 py-12">
 			<Container maxWidth="lg">
 				<SectionHeading subHeading="Our Dishes" heading="POPULAR DISHES" />
-				<div className="flex flex-wrap justify-center gap-4 lg:gap-3 my-10 lg:mx-40">
+				<div className="flex flex-wrap justify-center gap-4 lg:gap-3 my-10 lg:mx-6">
 					{dishesdata.map((dish) => (
 						<Card key={dish.id}>
 							<div className="flex justify-between items-center">
