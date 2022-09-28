@@ -8,10 +8,15 @@ import 'swiper/css/effect-fade';
 import { Container } from '@mui/material';
 import herodata from '../assets/herodata';
 import Button from './Button';
+import { useStateContext } from '../context/StateContext';
 
 const Hero = () => {
+	const { isSticky } = useStateContext();
 	return (
-		<Container maxWidth="lg" className="w-full h-full">
+		<Container
+			maxWidth="lg"
+			className={`w-full h-full z-10 ${isSticky ? 'pt-20' : null}`}
+		>
 			<div className="p-4 w-full h-max-content  lg:mt-14">
 				<Swiper
 					modules={[Navigation, Pagination, A11y]}

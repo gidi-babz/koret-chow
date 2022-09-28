@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { ImSearch } from 'react-icons/im';
 import { AiFillHeart } from 'react-icons/ai';
@@ -10,12 +10,28 @@ import Logo from './Logo';
 import headerdata from '../assets/headerdata';
 import Sidebar from './drawer';
 
+import { useStateContext } from '../context/StateContext';
+
 const Navbar = () => {
-	const [count, setCount] = React.useState(1);
-	const [invisible, setInvisible] = React.useState(true);
+	const [count, setCount] = useState(1);
+	const [invisible, setInvisible] = useState(true);
+
+	const { isSticky, setIsSticky } = useStateContext();
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setIsSticky(window.scrollY >= 500);
+		};
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	});
 
 	return (
-		<nav className="h-20 shadow-lg">
+		<nav
+			className={`h-20 w-full shadow-lg overflow-hidden bg-white ease-in-out duration-300 ${
+				isSticky ? 'fixed top-0 ' : null
+			}  z-50 `}
+		>
 			<CssBaseline />
 			<Container maxWidth="lg">
 				<Box
@@ -37,8 +53,8 @@ const Navbar = () => {
 								to={item.path}
 								spy={true}
 								smooth={true}
-								// offset={-70}
-								duration={500}
+								offset={-80}
+								duration={600}
 							>
 								{item.label}
 							</Link>

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { Checkbox, Container, Tooltip } from '@mui/material';
 import SectionHeading from '../components/SectionHeading';
@@ -11,14 +11,14 @@ import { AiFillHeart } from 'react-icons/ai';
 
 const Dishes = () => {
 	const label = { inputProps: { 'aria-label': 'Checkbox' } };
-	const [checked, setChecked] = React.useState(false);
+	// const [checked, setChecked] = React.useState(false);
 
-	const handleChange = (e) => {
-		setChecked(e.target.checked);
-	};
+	// const handleChange = (e) => {
+	// 	setChecked(e.target.checked);
+	// };
 
 	return (
-		<section id="dishes" className="bg-gray-100 py-12">
+		<section id="dishes" className="bg-gray-100 py-20 lg:py-12">
 			<Container maxWidth="lg">
 				<SectionHeading subHeading="Our Dishes" heading="POPULAR DISHES" />
 				<div className="flex flex-wrap justify-center gap-4 lg:gap-3 my-10 lg:mx-6">
@@ -33,8 +33,8 @@ const Dishes = () => {
 								<Tooltip title="Save" followCursor>
 									<div>
 										<Checkbox
-											checked={checked}
-											onChange={handleChange}
+											// checked={checked}
+											// onChange={handleChange}
 											{...label}
 											icon={<AiFillHeart />}
 											checkedIcon={<AiFillHeart className="text-green-600" />}
