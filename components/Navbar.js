@@ -8,7 +8,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { Badge, Box, Container, Tooltip } from '@mui/material';
 import Logo from './Logo';
 import headerdata from '../assets/headerdata';
-import Sidebar from './Drawer';
+import Sidebar from './drawer';
 
 const Navbar = () => {
 	const [count, setCount] = React.useState(1);
