@@ -53,7 +53,7 @@ const Dishes = () => {
 									/>
 									<p className="text-center text-md font-bold">{dish.title}</p>
 									<div className="flex justify-center items-center gap-2 mb-2">
-										<span className="text-green-600 text-md mr-0 font-semibold self-center">
+										<span className="text-green-600 text-md mr-1 font-semibold self-center">
 											&#x20A6;{dish.price}
 										</span>
 										<Button>Add To Cart</Button>
