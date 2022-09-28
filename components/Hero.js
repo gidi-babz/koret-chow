@@ -1,24 +1,24 @@
 import Image from 'next/image';
 
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/bundle';
 import 'swiper/css/effect-fade';
 
 import { Container } from '@mui/material';
 import herodata from '../assets/herodata';
+import Button from './Button';
 
 const Hero = () => {
 	return (
 		<Container maxWidth="lg" className="w-full h-full">
 			<div className="p-4 w-full h-max-content  lg:mt-14">
 				<Swiper
-					modules={[Navigation, Pagination, Scrollbar, A11y]}
+					modules={[Navigation, Pagination, A11y]}
 					spaceBetween={50}
 					slidesPerView={1}
 					navigation
 					pagination={{ clickable: true }}
-					// scrollbar={{ draggable: true }}
 					onSwiper={(swiper) => console.log(swiper)}
 					onSlideChange={() => console.log('slide change')}
 					className="w-full h-full"
@@ -38,12 +38,7 @@ const Hero = () => {
 										{hero.description}
 									</p>
 									<div>
-										<button
-											type="button"
-											className="text-sm mt-2 btn rounded-md py-1.5 px-4 cursor-pointer hover:opacity-70 outline-none"
-										>
-											Order Now
-										</button>
+										<Button>Order Now</Button>
 									</div>
 								</div>
 								<div className="lg:justify-self-end flex-1 mt-12 md:mt-16 lg:mr-14 lg:mt-auto">

@@ -4,7 +4,7 @@ import Hero from './Hero';
 
 const Header = () => {
 	return (
-		<header className="h-screen w-full">
+		<header id="home" className="h-auto xl:h-screen w-full">
 			<Navbar />
 			<Hero />
 		</header>

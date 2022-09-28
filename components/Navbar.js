@@ -8,7 +8,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { Badge, Box, Container, Tooltip } from '@mui/material';
 import Logo from './Logo';
 import headerdata from '../assets/headerdata';
-import Sidebar from './drawer';
+import Sidebar from './Drawer';
 
 const Navbar = () => {
 	const [count, setCount] = React.useState(1);
@@ -31,13 +31,13 @@ const Navbar = () => {
 					<ul className="flex-1 w-3/4 items-center justify-center gap-5 p-3 mr-6 hidden lg:flex">
 						{headerdata.map((item, i) => (
 							<Link
-								className="cursor-pointer font-small px-2 py-1 rounded-sm hover:text-green-600 active:bg-green-600 active:text-white active:ease-in "
+								className="cursor-pointer font-small px-2 py-1 rounded-sm hover:text-green-600 active:bg-green-600 active:text-white"
 								key={i}
 								activeClass="active"
 								to={item.path}
 								spy={true}
 								smooth={true}
-								offset={-70}
+								// offset={-70}
 								duration={500}
 							>
 								{item.label}
