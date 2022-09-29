@@ -5,6 +5,7 @@ import SectionHeading from '../components/SectionHeading';
 import dishesdata from '../assets/dishesdata';
 import Card from '../components/Card';
 import Button from '../components/Button';
+import Ratings from '../components/Ratings';
 
 import { IoEyeSharp } from 'react-icons/io5';
 import { AiFillHeart } from 'react-icons/ai';
@@ -18,7 +19,7 @@ const Dishes = () => {
 	// };
 
 	return (
-		<section id="dishes" className="bg-gray-100 py-20 lg:py-12">
+		<section id="dishes" className="bg-gray-100 py-12">
 			<Container maxWidth="lg">
 				<SectionHeading subHeading="Our Dishes" heading="POPULAR DISHES" />
 				<div className="flex flex-wrap justify-center gap-4 lg:gap-3 my-10 lg:mx-6">
@@ -52,6 +53,9 @@ const Dishes = () => {
 										className="object-contain w-max h-max"
 									/>
 									<p className="text-center text-md font-bold">{dish.title}</p>
+									<div className="text-center">
+										<Ratings ratings={dish.ratings} />
+									</div>
 									<div className="flex justify-center items-center gap-2 mb-2">
 										<span className="text-green-600 text-md mr-1 font-semibold self-center">
 											&#x20A6;{dish.price}

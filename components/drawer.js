@@ -56,8 +56,8 @@ const Sidebar = () => {
 								to={item.path}
 								spy={true}
 								smooth={true}
-								// offset={-70}
-								duration={500}
+								offset={-80}
+								duration={600}
 								onClick={() => setIsDrawerOpen(false)}
 							>
 								{item.label}

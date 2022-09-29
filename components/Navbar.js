@@ -20,7 +20,7 @@ const Navbar = () => {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			setIsSticky(window.scrollY >= 500);
+			setIsSticky(window.scrollY >= 550);
 		};
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
@@ -29,7 +29,7 @@ const Navbar = () => {
 	return (
 		<nav
 			className={`h-20 w-full shadow-lg overflow-hidden bg-white ease-in-out duration-300 ${
-				isSticky ? 'fixed top-0 ' : null
+				isSticky ? 'fixed top-0' : null
 			}  z-50 `}
 		>
 			<CssBaseline />
