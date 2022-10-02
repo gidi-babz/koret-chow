@@ -7,9 +7,15 @@ const Card = ({ children }) => {
 	const [isVisible, setIsVisible] = useState(false);
 	const label = { inputProps: { 'aria-label': 'Checkbox' } };
 
+	// const [checked, setChecked] = React.useState(false);
+
+	// const handleChange = (e) => {
+	// 	setChecked(e.target.checked);
+	// };
+
 	return (
 		<div
-			className={`shadow-md p-2 bg-white mb-4 lg:mb-0 lg:cursor-pointer`}
+			className={`shadow-md p-2 relative bg-white mb-4 lg:mb-0 lg:cursor-pointer card`}
 			onMouseOver={() => setIsVisible(true)}
 			onMouseLeave={() => setIsVisible(false)}
 		>

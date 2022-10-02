@@ -6,10 +6,10 @@ export default [
 			'Savour our juicy, tasty fried chicken. Feel a glimpse of heaven with each bite, enjoy with your folks',
 	},
 	{
-		title: 'Spaghetti & Cheese',
+		title: 'Spicy Noodles',
 		imageSrc: '/img/home-img-1.png',
 		description:
-			'You will never want to eat any other Spaghetti after your first trial. We have the best Chef with the golden recipe',
+			'You will never want to eat any other after your first trial. We have the best Chef with the golden recipe',
 	},
 	{
 		title: 'Peperoni Pizza',

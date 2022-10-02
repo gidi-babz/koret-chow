@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Checkbox, Container, Tooltip } from '@mui/material';
+import { Container } from '@mui/material';
 
 import SectionHeading from '../components/SectionHeading';
 import Card from '../components/Card';
@@ -8,17 +8,7 @@ import Button from '../components/Button';
 import Ratings from '../components/Ratings';
 import dishesdata from '../assets/dishesdata';
 
-import { IoEyeSharp } from 'react-icons/io5';
-import { AiFillHeart } from 'react-icons/ai';
-
 const Dishes = () => {
-	const label = { inputProps: { 'aria-label': 'Checkbox' } };
-	// const [checked, setChecked] = React.useState(false);
-
-	// const handleChange = (e) => {
-	// 	setChecked(e.target.checked);
-	// };
-
 	return (
 		<section id="dishes" className="bg-gray-100 py-12">
 			<Container maxWidth="lg">
@@ -39,7 +29,7 @@ const Dishes = () => {
 									<div className="text-center">
 										<Ratings ratings={dish.ratings} />
 									</div>
-									<div className="flex justify-center items-center gap-2 mb-2">
+									<div className="flex justify-center ease-in duration-300 items-center gap-2 mb-2 lg:hover:scale-x-110">
 										<span className="text-green-600 text-md mr-1 font-semibold self-center">
 											&#x20A6;{dish.price}
 										</span>
