@@ -53,7 +53,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 
 .hero-title,
-.dishes-heading {
+.dishes-heading,
+.about-desc-heading {
 	color: var(--black);
 }
 

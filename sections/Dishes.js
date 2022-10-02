@@ -1,11 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import { Checkbox, Container, Tooltip } from '@mui/material';
+
 import SectionHeading from '../components/SectionHeading';
-import dishesdata from '../assets/dishesdata';
 import Card from '../components/Card';
 import Button from '../components/Button';
 import Ratings from '../components/Ratings';
+import dishesdata from '../assets/dishesdata';
 
 import { IoEyeSharp } from 'react-icons/io5';
 import { AiFillHeart } from 'react-icons/ai';
@@ -25,24 +26,6 @@ const Dishes = () => {
 				<div className="flex flex-wrap justify-center gap-4 lg:gap-3 my-10 lg:mx-6">
 					{dishesdata.map((dish) => (
 						<Card key={dish.id}>
-							<div className="flex justify-between items-center">
-								<Tooltip title="more" followCursor>
-									<div className="p-2 rounded-full bg-slate-100 cursor-pointer">
-										<IoEyeSharp />
-									</div>
-								</Tooltip>
-								<Tooltip title="Save" followCursor>
-									<div>
-										<Checkbox
-											// checked={checked}
-											// onChange={handleChange}
-											{...label}
-											icon={<AiFillHeart />}
-											checkedIcon={<AiFillHeart className="text-green-600" />}
-										/>
-									</div>
-								</Tooltip>
-							</div>
 							<div className="flex flex-col items-start">
 								<div className="mx-5" style={{ width: '200px' }}>
 									<Image

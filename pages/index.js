@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import About from '../sections/About';
 import Dishes from '../sections/Dishes';
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
 		<>
 			<Header />
 			<Dishes />
+			<About />
 		</>
 	);
 }
