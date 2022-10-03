@@ -14,14 +14,14 @@ const Logo = () => {
 					gap: '3px',
 				}}
 			>
-				<GiKnifeFork className="text-2xl text-green-600" />
+				<GiKnifeFork className="text-2xl text-green-600 cursor-pointer" />
 				<Typography
 					variant="h7"
 					component="h1"
 					sx={{
 						display: { xs: 'none', sm: 'block' },
 					}}
-					className="font-semibold text-xl"
+					className="font-semibold text-xl cursor-pointer"
 				>
 					Koret Chow
 				</Typography>

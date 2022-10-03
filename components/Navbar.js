@@ -42,7 +42,15 @@ const Navbar = () => {
 						justifyContent: 'space-between',
 					}}
 				>
-					<Logo />
+					<Link
+						to="home"
+						activeClass="active"
+						spy={true}
+						smooth={true}
+						duration={600}
+					>
+						<Logo />
+					</Link>
 
 					<ul className="flex-1 w-3/4 items-center justify-center gap-5 p-3 mr-6 hidden lg:flex">
 						{headerdata.map((item, i) => (
