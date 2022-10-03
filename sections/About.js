@@ -21,25 +21,26 @@ const About = () => {
 							height={450}
 						/>
 					</div>
-					<div className="flex flex-col justify-start justify-self-start items-start flex-1 gap-3">
-						<h2 className="text-3xl sm:self-center lg:self-start font-bold about-desc-heading mb-px ">
+					<div className="flex flex-col justify-start justify-self-start items-start flex-1 gap-3 lg:mb-12">
+						<h2 className="text-3xl text-center self-center lg:self-start font-bold about-desc-heading mb-px ">
 							Best Food In The Country
 						</h2>
 						<p className="text-lg text-slate-400 mb-0">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-							Distinctio repudiandae perspiciatis impedit debitis amet odit et,
-							ea blanditiis odio ipsa, illo quos architecto?
+							Our online ordering solution allows you to make orders through our
+							website and mobile app. From quick setup to instant order
+							notifications, dynamic pricing, and instant payment.
 						</p>
 						<p className="text-lg text-slate-400">
-							Illo quos architecto? Recusandae quo magni odit placeat, incidunt
-							ratione perspiciatis impedit debitis.
+							Koret chow support is available nationwide. Contact our support
+							team and we'll connect you to an expert to get your issue resolved
+							within 24 business hours.
 						</p>
-						<div className="flex flex-row flex-wrap justify-center items-center gap-3 mt-3 mb-2">
-							<div className="flex justify-start items-center gap-2 shadow-md py-2 px-4 bg-slate-100 rounded-sm">
+						<div className="flex flex-row flex-wrap justify-start items-center gap-3 mt-3 mb-2">
+							<div className="flex justify-start items-center gap-2 mr-1 shadow-md py-2 px-4 bg-slate-100 rounded-sm">
 								<TbTruckDelivery className="text-xl text-green-600" />
 								<span className="text-xs about__desc--text">Free Delivery</span>
 							</div>
-							<div className="flex justify-start items-center gap-2 shadow-md py-2 px-4 bg-slate-100 rounded-sm">
+							<div className="flex justify-start items-center gap-2 mr-1 shadow-md py-2 px-4 bg-slate-100 rounded-sm">
 								<MdPayment className="text-xl text-green-600" />
 								<span className="text-xs about__desc--text">Easy Payments</span>
 							</div>
