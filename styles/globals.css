@@ -54,7 +54,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 .hero-title,
 .dishes-heading,
-.about-desc-heading {
+.about-desc-heading,
+.about__desc--text {
 	color: var(--black);
 }
 
