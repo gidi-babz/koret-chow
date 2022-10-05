@@ -21,9 +21,14 @@ const Menu = () => {
 
 	const paginate = (e, value) => {
 		setCurrentPage(value);
-
-		window.scrollTo({ top: 20, behavior: 'smooth' });
+		if (window.innerWidth > 1024) {
+			window.scrollTo({ top: 2380, behavior: 'smooth' });
+		}
+		if (window.innerWidth < 1024) {
+			window.scrollTo({ top: 6050, behavior: 'smooth' });
+		}
 	};
+
 	return (
 		<section id="menu" className="bg-gray-100 py-12">
 			<Container maxWidth="lg">
