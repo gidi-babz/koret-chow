@@ -35,17 +35,17 @@ const About = () => {
 							team and we'll connect you to an expert to get your issue resolved
 							within 24 business hours.
 						</p>
-						<div className="flex flex-row flex-wrap justify-start items-center gap-3 mt-3 mb-4">
+						<div className="flex flex-wrap justify-start items-center gap-3 mt-3 mb-4">
 							<div className="flex justify-start items-center gap-2 mr-3 lg:mr-2 mb-3 lg:mb-2 shadow-md py-2 px-4 bg-slate-100 rounded-sm">
-								<TbTruckDelivery className="text-xl text-green-600 mr-1" />
+								<TbTruckDelivery className="text-xl text-green-600 mr-1 lg:mr-0" />
 								<span className="text-xs about__desc--text">Free Delivery</span>
 							</div>
 							<div className="flex justify-start items-center gap-2 mr-3 lg:mr-2 mb-3 lg:mb-2 shadow-md py-2 px-4 bg-slate-100 rounded-sm">
-								<MdPayment className="text-xl text-green-600 mr-1" />
+								<MdPayment className="text-xl text-green-600 mr-1 lg:mr-0" />
 								<span className="text-xs about__desc--text">Easy Payments</span>
 							</div>
 							<div className="flex justify-start items-center gap-2 shadow-md py-2 px-4 mb-3 lg:mb-2 bg-slate-100 rounded-sm">
-								<RiCustomerService2Fill className="text-xl text-green-600 mr-1" />
+								<RiCustomerService2Fill className="text-xl text-green-600 mr-1 lg:mr-0" />
 								<span className="text-xs about__desc--text">24/7 Service</span>
 							</div>
 						</div>
