@@ -25,7 +25,7 @@ const Menu = () => {
 			window.scrollTo({ top: 2380, behavior: 'smooth' });
 		}
 		if (window.innerWidth < 1024) {
-			window.scrollTo({ top: 6050, behavior: 'smooth' });
+			window.scrollTo({ top: 6040, behavior: 'smooth' });
 		}
 	};
 
