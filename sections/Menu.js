@@ -1,6 +1,7 @@
+import React, { useState } from 'react';
 import Image from 'next/image';
 
-import { Container } from '@mui/material';
+import { Container, Pagination, paginationItemClasses } from '@mui/material';
 import SectionHeading from '../components/SectionHeading';
 import MenuCard from '../components/MenuCard';
 import Ratings from '../components/Ratings';
@@ -9,12 +10,26 @@ import Button from '../components/Button';
 import menudata from '../assets/menudata';
 
 const Menu = () => {
+	const [currentPage, setCurrentPage] = useState(1);
+	const menuPerPage = 8;
+
+	const lastMenuIndex = currentPage * menuPerPage;
+
+	const firstMenuIndex = lastMenuIndex - menuPerPage;
+
+	const currentMenuDishes = menudata.slice(firstMenuIndex, lastMenuIndex);
+
+	const paginate = (e, value) => {
+		setCurrentPage(value);
+
+		window.scrollTo({ top: 20, behavior: 'smooth' });
+	};
 	return (
 		<section id="menu" className="bg-gray-100 py-12">
 			<Container maxWidth="lg">
 				<SectionHeading subHeading="Our Menu" heading="TODAY'S SPECIALITY" />
-				<div className="flex flex-wrap justify-center gap-4 lg:gap-3 my-10 lg:mx-6">
-					{menudata?.map((menu, i) => (
+				<div className="flex flex-wrap justify-center items-start gap-4 lg:gap-3 my-10 lg:mx-6">
+					{currentMenuDishes?.map((menu, i) => (
 						<MenuCard key={i}>
 							<div className="flex flex-col items-start justify-start p-3 w-full">
 								<div
@@ -45,6 +60,17 @@ const Menu = () => {
 							</div>
 						</MenuCard>
 					))}
+				</div>
+				<div className="flex justify-center mt-8">
+					{menudata.length > 8 && (
+						<Pagination
+							size="small"
+							defaultPage={1}
+							count={Math.ceil(menudata.length / menuPerPage)}
+							page={currentPage}
+							onChange={paginate}
+						/>
+					)}
 				</div>
 			</Container>
 		</section>
