@@ -58,7 +58,7 @@ const Menu = () => {
 								</p>
 								<div className="flex justify-center ease-in duration-300 items-center gap-2 mb-2 lg:hover:scale-x-105">
 									<Button>Add To Cart</Button>
-									<span className="text-green-600 text-md mr-1 font-semibold self-center">
+									<span className="text-green-600 text-md ml-1 font-semibold self-center">
 										&#x20A6;{menu.price}
 									</span>
 								</div>
