@@ -46,7 +46,7 @@ const Menu = () => {
 										alt={menu.title}
 										width={290}
 										height={180}
-										className="object-cover w-max h-max rounded"
+										className="object-cover w-max h-max rounded z-0 relative"
 									/>
 								</div>
 								<div className="text-center">
