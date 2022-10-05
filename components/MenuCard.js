@@ -16,8 +16,8 @@ const MenuCard = ({ children }) => {
 			<>
 				<Tooltip title="Save" followCursor>
 					<div
-						className={`ease-in duration-300 opacity-0 ${
-							isVisible && 'opacity-100'
+						className={`ease-in duration-300 hover:bg-green-100 lg:opacity-0 ${
+							isVisible && 'lg:opacity-100'
 						} absolute top-4 right-4 z-10 bg-slate-100 rounded-full`}
 					>
 						<Checkbox

@@ -17,7 +17,7 @@ const Dishes = () => {
 					{dishesdata.map((dish) => (
 						<Card key={dish.id}>
 							<div className="flex flex-col items-start">
-								<div className="mx-5" style={{ width: '200px' }}>
+								<div className="mx-5" style={{ width: 'auto', height: 'auto' }}>
 									<Image
 										src={dish.imageSrc}
 										alt={dish.title}
