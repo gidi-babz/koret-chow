@@ -79,7 +79,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 	z-index: 0;
 	transform-origin: top left;
 	transform: translateX(-300px);
-	transition: transform 0.3s;
+	transition: transform 0.4s;
 }
 
 .card:hover::before {

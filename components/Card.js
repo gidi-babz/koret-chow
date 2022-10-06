@@ -26,12 +26,12 @@ const Card = ({ children }) => {
 					}`}
 				>
 					<Tooltip title="more" followCursor>
-						<div className="p-2 rounded-full bg-slate-100 cursor-pointer">
+						<div className="p-2 rounded-full hover:bg-green-100 ease-in duration-300 bg-slate-100 cursor-pointer">
 							<IoEyeSharp />
 						</div>
 					</Tooltip>
 					<Tooltip title="Save" followCursor>
-						<div>
+						<div className="rounded-full bg-slate-100 cursor-pointer ease-in duration-300 hover:bg-green-100">
 							<Checkbox
 								// checked={checked}
 								// onChange={handleChange}
